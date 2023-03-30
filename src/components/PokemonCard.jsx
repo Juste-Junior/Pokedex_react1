@@ -1,15 +1,6 @@
 
-function PokemonCard() {
-  const pokemonList = [
-    {
-      name: "bulbasaur",
-      sprite:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-    {
-      name: "mew",
-    },
-  ];
+function PokemonCard({pokemonList}) {
+  
   const pokemon = pokemonList[0]; // Premier Pokémon
 
   // Si on veut afficher le deuxième pokémon :

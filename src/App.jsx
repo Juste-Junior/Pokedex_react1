@@ -2,12 +2,24 @@ import './App.css'
 /* importer MyTtile dans App */
 import PokemonCard from "./components/PokemonCard"
 
+const pokemonList = [
+  {
+    name: "bulbasaur",
+    sprite:
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+  },
+  {
+    name: "mew",
+  },
+];
+
 function App() {
+ 
   return (
     <div>
-      <PokemonCard />
+       <PokemonCard pokemonList ={pokemonList} />
     </div>
   );
 }
-
 export default App;
+
