@@ -1,9 +1,11 @@
 
 
 import './App.css'
+import Navbar from './components/NavBar';
 /* importer MyTtile dans App */
 import PokemonCard from "./components/PokemonCard"
 import { useState } from "react";
+
 
 
 
@@ -34,28 +36,16 @@ function App() {
         name: "mew",
       },
     ];
-  const [index, setIndex] = useState(0)
-  console.log(index)
-
-  // la fonction qui gère la décrémentation
-  function handleClickPrevious() {
-    setIndex(index - 1)
-  }
-
-  // fonction qui gère l'incrémentation
-  function handleClickNext() {
-    setIndex(index + 1)
-  }
-
-  return (
-    <div>
-       <PokemonCard pokemonList ={pokemonList[index]} />
-       
-      {index>0 ? <button onClick = { handleClickPrevious}>Précédent</button> : null}
-      {index<pokemonList.length - 1  ? <button onClick = {handleClickNext}>suivant</button> : null}
-        
-    </div>
-  );
+    const [index, setIndex] = useState(0)
+    console.log(index)
+  
+   
+    return (
+      <div>
+         <PokemonCard pokemonList ={pokemonList[index]} /> 
+         <Navbar index={index} setIndex={setIndex} pokemonList={pokemonList}/>  
+      </div>
+    );
 }
 export default App;
 
